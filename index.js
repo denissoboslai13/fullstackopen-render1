@@ -78,9 +78,9 @@ app.post('/api/notes', (request, response) => {
   }
 
   const note = {
+    id: generateId(),
     content: body.content,
     important: body.important || false,
-    id: generateId(),
   }
 
   notes = notes.concat(note)
